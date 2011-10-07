@@ -1,3 +1,5 @@
+require 'mongo_mapper'
+
 class ::Visit
   include MongoMapper::EmbeddedDocument
 

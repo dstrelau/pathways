@@ -1,3 +1,6 @@
+require 'mongo_mapper'
+require 'pathways/visit'
+
 module Pathways
   class Session
     include MongoMapper::Document

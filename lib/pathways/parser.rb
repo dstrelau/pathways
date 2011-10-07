@@ -1,5 +1,10 @@
 require 'time'
 require 'json'
+require 'pathways/session'
+
+# FIXME duplicated in Pathways::Server
+MongoMapper.connection = Mongo::Connection.new('localhost')
+MongoMapper.database = 'pathways'
 
 module Pathways
   class Parser

@@ -1,3 +1,5 @@
+require 'pathways/session'
+
 module Pathways
   class Filter
       def self.map

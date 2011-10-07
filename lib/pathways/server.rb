@@ -1,6 +1,10 @@
 require 'sinatra/base'
 require 'erb'
-require 'pathways'
+require 'pathways/session'
+
+# FIXME there has got to be a better place for this
+MongoMapper.connection = Mongo::Connection.new('localhost')
+MongoMapper.database = 'pathways'
 
 module Pathways
   class Server < Sinatra::Base
@@ -9,6 +13,7 @@ module Pathways
     set :views,  "#{dir}/server/views"
     set :public, "#{dir}/server/public"
     set :static, true
+
 
     # Specify a logger to be used by the MongoDB driver
     # Value can be any that the Logger accepts for initialization
